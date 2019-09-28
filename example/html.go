@@ -4,9 +4,9 @@ import(
   "github.com/octu0/yuv"
 )
 
-func Yuv420pToRgb(r, u, v []uint8, width, height, yStride, uvStride int) {
+func Yuv420pToRgb(r, u, v []byte, width, height, yStride, uvStride int) {
   yuv420p  := yuv.NewYUV420p(width, height, yStride, uvStride)
-  rgbPlane := yuv420p.ConvertRGBA(d[0], d[1], d[2])
+  rgbPlane := yuv420p.ConvertRGBA(y, u, v)
 
   fmt.Println(`
   <style>

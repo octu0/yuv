@@ -31,6 +31,8 @@ YUV data can be expressed in HTML by using the following code(html.go).
 
 see [big_buck_bunny.yuv.html](http://htmlpreview.github.io/?https://github.com/octu0/yuv/blob/master/example/big_buck_bunny.yuv.html)
 
+![browser debug](https://github.com/octu0/yuv/blob/master/example/screenshot_2019-09-29.png?raw=true)
+
 ### Big Buck Bunny
 
 [Big Buck Bunny](https://peach.blender.org/) is licensed under the [Creative Commons Attribution 3.0 license](http://creativecommons.org/licenses/by/3.0/).

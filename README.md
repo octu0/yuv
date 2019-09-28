@@ -9,6 +9,8 @@ this util feature:
 
 [example directory](https://github.com/octu0/yuv/tree/master/example) contains examples of converting yuv data to a format that can be expressed in HTML.
 
+![browser debug](https://github.com/octu0/yuv/blob/master/example/screenshot_2019-09-29.png?raw=true)
+
 # Usage
 
 Prepare video data in YUV format and execute as below.

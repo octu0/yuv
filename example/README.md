@@ -5,7 +5,7 @@ YUV data can be expressed in HTML by using the following code(html.go).
 
 ```
   yuv420p  := yuv.NewYUV420p(width, height, yStride, uvStride)
-  rgbPlane := yuv420p.ConvertRGBA(d[0], d[1], d[2])
+  rgbPlane := yuv420p.ConvertRGBA(y, u, v)
 
   fmt.Println(`
   <style>

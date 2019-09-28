@@ -3,8 +3,9 @@
 YUV(I420/yuv420p) utils.
 
 this util feature:
--Convert I420 / YUV420 planar format data to rgb array
--Convert YCrCb to RGB
+
+- Convert I420 / YUV420 planar format data to rgb array
+- Convert YCrCb to RGB
 
 [https://github.com/octu0/yuv/tree/master/example](examples directory) contains examples of converting yuv data to a format that can be expressed in HTML.
 

@@ -31,8 +31,8 @@ func main(){
 func decodedFrame(yuv420p *yuv.YUV420p, yPlane []byte, uPlane []byte, vPlane []byte) {
   rgb := yuv420p.ConvertRGBA(yPlane, uPlane, vPlane)
   i   := 0
-  for y := 0; y < height; y += 1 {
-    for x := 0; x < width; x += 1 {
+  for y := 0; y < yuv420p.Height; y += 1 {
+    for x := 0; x < yuv420p.Width; x += 1 {
       rgba := rgb[i]
       r, g, b := rgba.R, rgba.G, rgba.B
       fmt.Printf("r=%02x g=%02x b=%02x", r, g, b)

@@ -16,6 +16,10 @@ this util feature:
 Prepare video data in YUV format and execute as below.
 
 ```
+import(
+  "github.com/octu0/yuv"
+)
+
 func main(){
   info    := decoder.Decode("foo.yuv")
   yuv420p := yuv.NewYUV420p(info.width, info.height, info.yStride, info.uvStride)

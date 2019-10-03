@@ -2,6 +2,8 @@ package yuv
 
 import(
   "math"
+  "image"
+  "image/color"
 )
 
 //
@@ -89,6 +91,23 @@ func (n *YUV420p) ConvertRGBA(yPlane, uPlane, vPlane []byte) []RGBA {
     }
   }
   return rgbPlane
+}
+func ConvertRGBAtoYCbCr(src *image.RGBA) *image.YCbCr {
+  rectangle := src.Bounds()
+  img := image.NewYCbCr(rectangle, image.YCbCrSubsampleRatio420)
+  for y := rectangle.Min.Y; y < rectangle.Max.Y; y += 1 {
+    for x := rectangle.Min.X; x < rectangle.Max.X; x += 1 {
+      rgba       := src.RGBAAt(x, y)
+      yy, uu, vv := color.RGBToYCbCr(rgba.R, rgba.G, rgba.B)
+
+      cy := img.YOffset(x, y)
+      ci := img.COffset(x, y)
+      img.Y[cy]  = yy
+      img.Cb[ci] = uu
+      img.Cr[ci] = vv
+    }
+  }
+  return img
 }
 
 //
